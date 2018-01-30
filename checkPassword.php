@@ -1,7 +1,11 @@
 <?php
   $password = 'foobar';
   $guess = file_get_contents('php://input');
+  $access = "";
 
-  exit($guess);
+  if($guess === $password){
+    $access = 'ok';
+  }
 
+  exit($access);
 ?>

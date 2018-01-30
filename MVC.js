@@ -29,20 +29,28 @@ c.checkPassword = function(guessedPassword){
       m.passwordIsValid = false
       console.log('Trouble at the server')
     }
-      
   })
   postman.addEventListener('error', function(){
-    
+    m.passwordIsValid = false
+    console.log('Trouble at the server')
   })
 }  
 
-c.downloadContacts = function(){}
+c.downloadContacts = function(){
+  if(!m.passwordIsValid){return}
+}
 
-c.addContact = function(){}
+c.addContact = function(){
+  if(!m.passwordIsValid){return}
+}
 
-c.saveContact = function(){}
+c.saveContact = function(){
+  if(!m.passwordIsValid){return}
+}
 
-c.deleteContact = function(){}
+c.deleteContact = function(){
+  if(!m.passwordIsValid){return}
+}
 
 c.addAndSave = function(){
   c.addContact()
@@ -54,4 +62,7 @@ c.deleteAndSave = function(){
   c.saveCOntact()
 }
 
-c.showContacts = function(){}
+c.showContacts = function(){
+  if(!m.passwordIsValid){return}
+  console.log(m.contacts)
+}
